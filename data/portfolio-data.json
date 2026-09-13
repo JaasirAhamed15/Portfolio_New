@@ -1,0 +1,429 @@
+{
+  "hero": {
+    "greeting": "Welcome to my portfolio",
+    "name": "Jaasir Ahamed",
+    "roles": [
+      "Full Stack Developer - MERN",
+      "React Developer",
+      "UI/UX Enthusiast",
+      "Problem Solver",
+      "App Developer - Flutter",
+      "IoT Engineer"
+    ],
+    "bio": "I'm Jaasir Ahamed B.E Computer Science student passionate about building clean, performant web experiences. I love turning ideas into real products through code.",
+    "profileImage": "/assets/my_image.png",
+    "resumeUrl": "/certificates/JaasirAhamedA.pdf"
+  },
+  "about": {
+    "title": "About Me",
+    "roleBadge": "Software Developer & Programming Enthusiast",
+    "bio1": "I am a Full Stack Developer specialising in web and mobile applications, with over 2 years of part-time experience. My focus is on building secure, scalable, and sustainable applications that serve clients worldwide.",
+    "bio2": "I hold a Bachelor's degree in Computer Science Engineering. I enjoy problem-solving, debugging, and participating in coding competitions to sharpen my skills, and I'm constantly exploring new technologies to stay ahead in this fast-evolving industry.",
+    "image": "/assets/my_image.png",
+    "stats": [
+      {
+        "value": "5+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "10+",
+        "label": "Projects Built"
+      },
+      {
+        "value": "BE",
+        "label": "CS Engineering"
+      }
+    ],
+    "contact": {
+      "email": "jaasirahamed87@gmail.com",
+      "phone": "+91 6379926170",
+      "github": "https://github.com/JaasirAhamed15",
+      "linkedin": "https://www.linkedin.com/in/jaasirahamed15"
+    }
+  },
+  "skills": [
+    {
+      "iconType": "html5",
+      "name": "HTML5",
+      "color": "#E34F26"
+    },
+    {
+      "iconType": "css3",
+      "name": "CSS3",
+      "color": "#1572B6"
+    },
+    {
+      "iconType": "javascript",
+      "name": "JavaScript",
+      "color": "#F7DF1E"
+    },
+    {
+      "iconType": "react",
+      "name": "React",
+      "color": "#61DAFB"
+    },
+    {
+      "iconType": "nextjs",
+      "name": "Next.js",
+      "color": "#FFFFFF"
+    },
+    {
+      "iconType": "nodejs",
+      "name": "Node.js",
+      "color": "#339933"
+    },
+    {
+      "iconType": "tailwind",
+      "name": "Tailwind",
+      "color": "#06B6D4"
+    },
+    {
+      "iconType": "mongodb",
+      "name": "MongoDB",
+      "color": "#47A248"
+    },
+    {
+      "iconType": "mysql",
+      "name": "MySQL",
+      "color": "#4479A1"
+    },
+    {
+      "iconType": "flutter",
+      "name": "Flutter",
+      "color": "#02569B"
+    },
+    {
+      "iconType": "python",
+      "name": "Python",
+      "color": "#3776AB"
+    },
+    {
+      "iconType": "java",
+      "name": "Java",
+      "color": "#ED8B00"
+    },
+    {
+      "iconType": "cplusplus",
+      "name": "C / C++",
+      "color": "#00599C"
+    },
+    {
+      "iconType": "figma",
+      "name": "Figma",
+      "color": "#F24E1E"
+    },
+    {
+      "iconType": "github",
+      "name": "GitHub",
+      "color": "#E6EDF3"
+    },
+    {
+      "iconType": "iot",
+      "name": "IoT",
+      "color": "#FBBF24"
+    },
+    {
+      "name": "Nestjs",
+      "color": "#3B82F6",
+      "iconType": "react"
+    },
+    {
+      "name": "Nestjs",
+      "color": "#3178C6",
+      "iconType": "react"
+    }
+  ],
+  "education": [
+    {
+      "iconType": "grad",
+      "iconColor": "#FBBF24",
+      "institution": "Mount Zion College Of Engineering And Technology",
+      "period": "2022 – 2026",
+      "details": "BE Computer Science And Engineering",
+      "current": true
+    },
+    {
+      "iconType": "school",
+      "iconColor": "#93C5FD",
+      "institution": "M CT RM Ramanathan Chettiyar Higher Secondary School",
+      "period": "2020 – 2022",
+      "details": "Bio Maths (Grade 11–12)",
+      "current": false
+    },
+    {
+      "iconType": "riSchool",
+      "iconColor": "#FB923C",
+      "institution": "SSA High School",
+      "period": "2015 – 2020",
+      "details": "Grade 6–10",
+      "current": false
+    }
+  ],
+  "services": [
+    {
+      "emoji": "💻",
+      "title": "Full Stack Developer",
+      "tag": "MERN · Next.js",
+      "description": "Building scalable web apps with MongoDB, Express, React, Node.js, and Next.js — from pixel-perfect UIs to robust, secure backend APIs.",
+      "image": "/assets/MERN.png",
+      "accent": "#3B82F7"
+    },
+    {
+      "emoji": "📱",
+      "title": "Mobile App Developer",
+      "tag": "Flutter · React Native",
+      "description": "Cross-platform apps for Android & iOS with smooth animations, great UX, and clean architecture using Flutter and React Native.",
+      "image": "/assets/App Development.png",
+      "accent": "#06B6D4"
+    },
+    {
+      "emoji": "🔌",
+      "title": "IoT & Embedded Systems",
+      "tag": "ESP32 · Raspberry Pi · Arduino",
+      "description": "Connecting hardware to the cloud — sensor networks, automation pipelines, and smart systems built on ESP32, Raspberry Pi, and Arduino.",
+      "image": "/assets/Iot.png",
+      "accent": "#10B981"
+    },
+    {
+      "emoji": "🤖",
+      "title": "Robotics & AI",
+      "tag": "YOLO · Automation · AI",
+      "description": "Autonomous systems powered by YOLO object detection, AI decision-making, and industrial automation — always pushing what's possible.",
+      "image": "/assets/Robot.png",
+      "accent": "#A855F7"
+    }
+  ],
+  "experiences": [
+    {
+      "company": "RCK Techiees",
+      "role": "Full Stack Developer Intern",
+      "period": "Dec 2025 – Mar 2026",
+      "accent": "#3B82F6",
+      "initials": "RCK",
+      "cert": {
+        "image": "/certificates/internship.png",
+        "title": "Internship Certificate — RCK Techiees"
+      },
+      "techIcons": [
+        {
+          "iconType": "react",
+          "color": "#61DAFB",
+          "label": "React"
+        },
+        {
+          "iconType": "node",
+          "color": "#339933",
+          "label": "Node.js"
+        },
+        {
+          "iconType": "freshworks",
+          "color": "#26B24B",
+          "label": "Freshworks"
+        }
+      ],
+      "bullets": [
+        "Migrated 5+ ticketing systems (Jira, Zoho Desk, ManageEngine, Zendesk) to Freshservice/Freshdesk.",
+        "Automated migration workflows via APIs, reducing manual effort and improving data accuracy.",
+        "Handled large-scale ticket data — users, conversations, attachments, and metadata — with high precision.",
+        "Ensured data integrity and smooth transitions with minimal downtime.",
+        "Contributed to full-stack development using React.js and Node.js.",
+        "Gained hands-on experience in API integrations and automation workflows."
+      ]
+    },
+    {
+      "company": "ZED INDEX",
+      "role": "Software Developer Intern",
+      "period": "June 2025 – July 2025",
+      "accent": "#06B6D4",
+      "initials": "ZED",
+      "cert": {
+        "image": "/certificates/Rck Techiees.png",
+        "title": "Internship Certificate — ZED INDEX"
+      },
+      "techIcons": [
+        {
+          "iconType": "react",
+          "color": "#61DAFB",
+          "label": "React"
+        },
+        {
+          "iconType": "node",
+          "color": "#339933",
+          "label": "Node.js"
+        },
+        {
+          "iconType": "next",
+          "color": "#FFFFFF",
+          "label": "Next.js"
+        }
+      ],
+      "bullets": [
+        "Developed and debugged web application features using React.js, Node.js, and Next.js.",
+        "Collaborated on scalable frontend and backend modules.",
+        "Gained experience in real-world development workflows and deployment."
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "src": "/certificates/Flutter.png",
+      "title": "Flutter Development",
+      "issuer": "Google"
+    },
+    {
+      "src": "/certificates/Html&Css.png",
+      "title": "HTML & CSS",
+      "issuer": "Coursera"
+    },
+    {
+      "src": "/certificates/Mongodb.png",
+      "title": "MongoDB",
+      "issuer": "MongoDB"
+    },
+    {
+      "src": "/certificates/React.png",
+      "title": "React Developer",
+      "issuer": "Meta"
+    },
+    {
+      "src": "/certificates/reactbasics.png",
+      "title": "React Basics",
+      "issuer": "Meta"
+    },
+    {
+      "src": "/certificates/reactadvance.png",
+      "title": "React Advanced",
+      "issuer": "Meta"
+    },
+    {
+      "src": "/certificates/intro.png",
+      "title": "Intro to Frondend Development",
+      "issuer": "Coursera"
+    },
+    {
+      "src": "/certificates/Prompt.jpg",
+      "title": "Prompt Engineering",
+      "issuer": "DeepLearning.AI"
+    },
+    {
+      "src": "/certificates/internship.png",
+      "title": "Internship Certificate",
+      "issuer": "ZED INDEX"
+    },
+    {
+      "src": "/certificates/Rck Techiees.png",
+      "title": "RCK Techiees Certificate",
+      "issuer": "RCK Techiees"
+    },
+    {
+      "src": "/certificates/FS Advance.png",
+      "title": "FS Advance Certificate",
+      "issuer": "Freshworks"
+    },
+    {
+      "src": "/certificates/FS Solution Engineer.png",
+      "title": "FS Solution Engineer Certificate",
+      "issuer": "Freshworks"
+    },
+    {
+      "src": "/certificates/Freshworks Implementation Specialist.png",
+      "title": "FS Implementation Specialist Certificate",
+      "issuer": "Freshworks"
+    },
+    {
+      "src": "/certificates/Freshworks Certified Seller EX.png",
+      "title": "FS Certified Seller Certificate",
+      "issuer": "Freshworks"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "E-Commerce Website",
+      "emoji": "🛒",
+      "tag": "MERN Stack",
+      "tagColor": "#3B82F6",
+      "main": "A full-fledged MERN stack e-commerce platform with product browsing, cart, secure payments, user authentication, order management, and an admin dashboard for inventory control.",
+      "image": "/assets/ecomimg.png",
+      "demo": "https://github.com/JaasirAhamed15/E-commerce",
+      "demoLabel": "GitHub"
+    },
+    {
+      "id": "proj-2",
+      "title": "Shopping App",
+      "emoji": "📱",
+      "tag": "Flutter",
+      "tagColor": "#06B6D4",
+      "main": "Scan product barcodes to auto-add items to cart with live pricing. Supports secure checkout via Razorpay or Stripe payment gateway.",
+      "image": "/assets/autocard.jpg",
+      "demo": "https://www.linkedin.com/posts/lakshmanan-palaniappan4_flutter-innovation-robotics-ugcPost-7274838198508236800-7rCr",
+      "demoLabel": "LinkedIn"
+    },
+    {
+      "id": "proj-3",
+      "title": "Smart EVM Machine",
+      "emoji": "🗳️",
+      "tag": "IoT · ESP32",
+      "tagColor": "#10B981",
+      "main": "IoT-powered Electronic Voting Machine with RFID authentication, real-time vote counting, and Firebase backend for transparent elections.",
+      "image": "/assets/voteing.jpg",
+      "demo": "https://github.com/JaasirAhamed15/smart_evm",
+      "demoLabel": "GitHub"
+    },
+    {
+      "id": "proj-4",
+      "title": "Number Plate Detection",
+      "emoji": "🚗",
+      "tag": "Computer Vision",
+      "tagColor": "#F59E0B",
+      "main": "Real-time vehicle number plate detection using OpenCV and YOLO. Ideal for parking management, toll booths, and security with AI-driven OCR.",
+      "image": "/assets/numplate.jpg",
+      "demo": "https://github.com/JaasirAhamed15",
+      "demoLabel": "GitHub"
+    },
+    {
+      "id": "proj-5",
+      "title": "Blog Website",
+      "emoji": "📝",
+      "tag": "Next.js · MongoDB",
+      "tagColor": "#8B5CF6",
+      "main": "Dynamic blog platform with full CRUD, rich text editing, image uploads, and a fully responsive design optimized for all screen sizes.",
+      "image": "/assets/blog.jpg",
+      "demo": "https://github.com/JaasirAhamed15/my_blog",
+      "demoLabel": "GitHub"
+    },
+    {
+      "id": "proj-6",
+      "title": "Text to Image Generator",
+      "emoji": "🖼️",
+      "tag": "AI · ClipDrop API",
+      "tagColor": "#EC4899",
+      "main": "AI-powered app that converts text prompts into images via the ClipDrop API — with prompt history, style options, and download support.",
+      "image": "/assets/texttoimage.webp",
+      "demo": "https://github.com/JaasirAhamed15/imagify",
+      "demoLabel": "GitHub"
+    },
+    {
+      "id": "proj-7",
+      "title": "Waste Picker Robot",
+      "emoji": "🤖",
+      "tag": "Robotics · Arduino",
+      "tagColor": "#F97316",
+      "main": "Autonomous robot for public waste collection using ESP32-CAM, Arduino, ultrasonic sensors, and a mechanical arm for detecting and sorting trash.",
+      "image": "/assets/rover.jpg",
+      "demo": null,
+      "demoLabel": null
+    },
+    {
+      "id": "proj-8",
+      "title": "Travelon - Tourist Safety System",
+      "emoji": "📍",
+      "tag": "Next.js · Flutter · Node.js",
+      "tagColor": "#EF4444",
+      "main": "Smart tourist safety platform with real-time live tracking, geofencing alerts, and SOS emergency system. Tourists are monitored via mobile or wearable devices, and agencies/guides receive instant alerts to respond and rescue in danger situations.",
+      "image": "/assets/Tourist safety and tracking in action.png",
+      "demo": "https://github.com/JaasirAhamed15/travelon",
+      "demoLabel": "GitHub"
+    }
+  ]
+}

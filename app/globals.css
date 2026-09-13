@@ -1,26 +1,309 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
+/* Base Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Light Mode Overrides */
+.light body,
+html.light body,
+.light main {
+  background-color: #f4f6fa !important;
+  color: #0f172a !important;
+}
+
+/* Dark Mode Defaults */
+.dark body,
+html.dark body,
+.dark main {
+  background-color: #171d32 !important;
+  color: #ffffff !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LIGHT THEME: BUTTONS & CTA STYLING
+───────────────────────────────────────────────────────────── */
+
+/* Primary CTA Button (Contact Me) in Light Mode */
+.light .btn-primary,
+.light button.bg-\[\#465697\] {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4) !important;
+  border: none !important;
+}
+.light .btn-primary:hover,
+.light button.bg-\[\#465697\]:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
+  box-shadow: 0 12px 24px -4px rgba(37, 99, 235, 0.5) !important;
+}
+
+/* Secondary CTA Button (Download CV) in Light Mode */
+.light .btn-secondary,
+.light button.border-\[\#465697\] {
+  background: #ffffff !important;
+  color: #2563eb !important;
+  border: 2px solid #2563eb !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12) !important;
+}
+.light .btn-secondary:hover,
+.light button.border-\[\#465697\]:hover {
+  background: #2563eb !important;
+  color: #ffffff !important;
+}
+
+/* Badge tags in Experience (e.g. DEC 2025 - MAR 2026) */
+.light .bg-gray-800.text-gray-400 {
+  background-color: #e0e7ff !important;
+  color: #1e40af !important;
+  border-color: #bfdbfe !important;
+}
+
+/* View Certificate button in Experience */
+.light button:has(svg) {
+  border-color: currentColor;
+}
+
+/* Light Mode Navigation */
+.light nav {
+  color: #1e293b !important;
+}
+.light nav a li {
+  color: #334155 !important;
+}
+.light nav a li:hover {
+  color: #2563eb !important;
+}
+
+/* Light Mode Section Backgrounds & Headings */
+.light #About {
+  background: linear-gradient(to bottom, #ffffff, #edf2f7) !important;
+}
+.light #About h2,
+.light #About h3 {
+  color: #0f172a !important;
+}
+
+.light #Skills {
+  background: #f4f6fa !important;
+}
+.light #Skills h2,
+.light #Skills h3 {
+  color: #0f172a !important;
+}
+
+.light #Services {
+  background: linear-gradient(to bottom, #eef2ff, #f4f6fa) !important;
+}
+.light #Services h2,
+.light #Services h3 {
+  color: #0f172a !important;
+}
+
+.light #Experience {
+  background: linear-gradient(to bottom, #edf2f7, #f4f6fa) !important;
+}
+.light #Experience h2,
+.light #Experience h3 {
+  color: #0f172a !important;
+}
+
+.light #Certificates {
+  background: linear-gradient(to bottom, #f4f6fa, #edf2f7) !important;
+}
+.light #Certificates h2 {
+  color: #0f172a !important;
+}
+
+.light #Projects {
+  background: #f4f6fa !important;
+}
+.light #Projects h2 {
+  color: #0f172a !important;
+}
+
+.light #Coding {
+  background: linear-gradient(to bottom, #f0fdf4, #f4f6fa) !important;
+}
+.light #Coding h2,
+.light #Coding h3 {
+  color: #0f172a !important;
+}
+
+.light #Contact {
+  background: linear-gradient(to bottom right, #ffffff, #e2e8f0, #cbd5e1) !important;
+  color: #0f172a !important;
+}
+.light #Contact h2 {
+  color: #0f172a !important;
+}
+.light #Contact p,
+.light #Contact span {
+  color: #334155 !important;
+}
+
+/* Light card containers */
+.light .bg-gray-900\/60,
+.light .bg-gray-900\/70,
+.light .bg-gray-900\/80,
+.light .bg-gray-900\/90,
+.light .bg-gray-900\/50,
+.light .bg-gray-800\/50,
+.light .bg-gray-800\/40,
+.light .bg-gray-900,
+.light .bg-gray-800 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.07), 0 8px 10px -6px rgba(0, 0, 0, 0.04) !important;
+}
+
+.light .text-white {
+  color: #0f172a !important;
+}
+
+.light .text-gray-300,
+.light .text-gray-400 {
+  color: #475569 !important;
+}
+
+.light .border-gray-700,
+.light .border-gray-700\/60,
+.light .border-gray-700\/50,
+.light .border-gray-700\/40,
+.light .border-gray-800,
+.light .border-gray-800\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+.light .bg-gray-950,
+.light .bg-gray-950\/60,
+.light .bg-gray-950\/40 {
+  background-color: #f8fafc !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LIGHT THEME: CERTIFICATES CAROUSEL & CARDS
+───────────────────────────────────────────────────────────── */
+.light #Certificates {
+  background: linear-gradient(to bottom, #f8fafc, #edf2f7) !important;
+}
+
+/* Center and Side Certificate Cards */
+.light #Certificates div[class*="border"] {
+  border-color: #cbd5e1 !important;
+}
+.light #Certificates .border-blue-500\/60 {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 20px 35px -10px rgba(59, 130, 246, 0.25), 0 0 25px rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Certificate Image Container */
+.light #Certificates .bg-gray-900.aspect-\[4\/3\] {
+  background-color: #ffffff !important;
+}
+
+/* Certificate Card Bottom Overlay */
+.light #Certificates div[class*="bg-gray-900\/90"] {
+  background-color: #ffffff !important;
+  border-top-color: #e2e8f0 !important;
+  backdrop-filter: blur(8px) !important;
+}
+.light #Certificates div[class*="bg-gray-900\/90"] p.text-white {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+.light #Certificates div[class*="bg-gray-900\/90"] p.text-blue-400 {
+  color: #2563eb !important;
+  font-weight: 600 !important;
+}
+
+/* Carousel Prev & Next Round Buttons */
+.light #Certificates button[aria-label="Previous"],
+.light #Certificates button[aria-label="Next"] {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1) !important;
+}
+.light #Certificates button[aria-label="Previous"]:hover,
+.light #Certificates button[aria-label="Next"]:hover {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35) !important;
+}
+
+/* Dot Indicators */
+.light #Certificates .bg-gray-600 {
+  background-color: #cbd5e1 !important;
+}
+.light #Certificates .bg-gray-600:hover {
+  background-color: #94a3b8 !important;
+}
+
+/* Progress bar background */
+.light #Certificates .bg-gray-700\/60 {
+  background-color: #e2e8f0 !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LIGHT THEME: PROJECTS, SERVICES & CODING CARDS
+───────────────────────────────────────────────────────────── */
+/* Light Project Cards */
+.light #Projects .group.relative {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04) !important;
+}
+.light #Projects .group.relative .bg-gray-950 {
+  background-color: #f1f5f9 !important;
+}
+
+/* Light Services Cards */
+.light #Services .relative.rounded-2xl {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Light Coding Profiles Card */
+.light #Coding .border-gray-700\/50 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Soften background glow elements in light mode so colors look fresh, not dark/muddy */
+.light [aria-hidden="true"],
+.light [aria-hidden] {
+  opacity: 0.3 !important;
+}
+
+/* Light Admin Panel styling */
+.light aside {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+.light aside h2,
+.light aside span {
+  color: #0f172a !important;
+}
+.light aside button {
+  color: #475569 !important;
+}
+.light aside button:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
 }
