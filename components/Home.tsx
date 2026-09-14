@@ -51,8 +51,8 @@ const itemVariants: Variants = {
 };
 
 const imageVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.88, x: 40 },
-  visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.9, ease: "easeOut" } },
+  hidden: { opacity: 0.85, scale: 0.95 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.45, ease: "easeOut" } },
 };
 
 const DEFAULT_HERO: HeroData = {
@@ -202,6 +202,7 @@ const Home = ({ hero = DEFAULT_HERO }: { hero?: HeroData }) => {
             width={500}
             height={500}
             priority
+            sizes="(max-width: 640px) 224px, (max-width: 768px) 288px, (max-width: 1024px) 320px, 448px"
             className="
               relative
               w-56 sm:w-72 md:w-80 lg:w-full

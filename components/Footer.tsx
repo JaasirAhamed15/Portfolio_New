@@ -53,26 +53,31 @@ const Footer = ({ contact }: { contact?: AboutData["contact"] }) => {
             icon: <MdOutlineEmail size={22} />,
             text: email,
             link: `mailto:${email}`,
+            label: `Send email to ${email}`,
           },
           {
             icon: <CiLinkedin size={22} />,
             text: "LinkedIn Profile",
             link: linkedin,
+            label: "Visit LinkedIn profile",
           },
           {
             icon: <FaGithub size={22} />,
             text: "GitHub Profile",
             link: github,
+            label: "Visit GitHub profile",
           },
           {
             icon: <FaMobileAlt size={22} />,
             text: phone,
             link: `tel:${phone}`,
+            label: `Call ${phone}`,
           },
         ].map((item, i) => (
           <motion.a
             key={i}
             href={item.link}
+            aria-label={item.label}
             target={item.link.startsWith("http") ? "_blank" : undefined}
             rel="noopener noreferrer"
             custom={i}

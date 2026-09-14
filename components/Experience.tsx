@@ -54,6 +54,7 @@ const CertPopup = ({
           </div>
           <button
             onClick={onClose}
+            aria-label="Close certificate dialog"
             className="text-gray-400 hover:text-white p-1 rounded-lg
               hover:bg-gray-700/60 transition-all duration-200 cursor-pointer"
           >

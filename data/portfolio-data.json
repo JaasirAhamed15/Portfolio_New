@@ -22,7 +22,7 @@
     "image": "/assets/my_image.png",
     "stats": [
       {
-        "value": "5+",
+        "value": "2+",
         "label": "Years Experience"
       },
       {
@@ -128,9 +128,9 @@
       "iconType": "react"
     },
     {
-      "name": "Nestjs",
-      "color": "#3178C6",
-      "iconType": "react"
+      "name": "NestJS",
+      "color": "#ff0000",
+      "iconType": "<SiNestjs />"
     }
   ],
   "education": [
@@ -343,10 +343,14 @@
       "emoji": "🛒",
       "tag": "MERN Stack",
       "tagColor": "#3B82F6",
-      "main": "A full-fledged MERN stack e-commerce platform with product browsing, cart, secure payments, user authentication, order management, and an admin dashboard for inventory control.",
+      "main": "A full-fledged MERN stack e-commerce platform with product browsing, cart, secure payments, user authentication, and admin inventory control.",
+      "fullDescription": "A complete, production-ready full stack e-commerce web application architected with MongoDB, Express.js, React, and Node.js. Features seamless user authentication with JWT, rich product catalog browsing with real-time filtering, shopping cart persistence, secure payment integration via Stripe/Razorpay, customer order history tracking, and a comprehensive admin management dashboard for handling products, stock inventory, and customer transactions.",
       "image": "/assets/ecomimg.png",
       "demo": "https://github.com/JaasirAhamed15/E-commerce",
-      "demoLabel": "GitHub"
+      "demoLabel": "GitHub",
+      "github": "https://github.com/JaasirAhamed15/E-commerce",
+      "secondaryLink": "",
+      "secondaryLinkLabel": "Live Demo"
     },
     {
       "id": "proj-2",
@@ -354,10 +358,14 @@
       "emoji": "📱",
       "tag": "Flutter",
       "tagColor": "#06B6D4",
-      "main": "Scan product barcodes to auto-add items to cart with live pricing. Supports secure checkout via Razorpay or Stripe payment gateway.",
+      "main": "Scan product barcodes to auto-add items to cart with live pricing and secure payment gateway checkout.",
+      "fullDescription": "Cross-platform Flutter mobile application designed for next-generation retail shopping. Shoppers can scan barcode tags directly with camera vision to instantly populate their digital shopping cart with real-time price calculations and discounts. Integrated with Razorpay/Stripe checkout SDK for frictionless in-app payments, order invoice generation, and real-time synchronization with cloud inventory.",
       "image": "/assets/autocard.jpg",
       "demo": "https://www.linkedin.com/posts/lakshmanan-palaniappan4_flutter-innovation-robotics-ugcPost-7274838198508236800-7rCr",
-      "demoLabel": "LinkedIn"
+      "demoLabel": "LinkedIn",
+      "github": "https://github.com/JaasirAhamed15",
+      "secondaryLink": "https://www.linkedin.com/posts/lakshmanan-palaniappan4_flutter-innovation-robotics-ugcPost-7274838198508236800-7rCr",
+      "secondaryLinkLabel": "Watch Demo"
     },
     {
       "id": "proj-3",
@@ -365,10 +373,14 @@
       "emoji": "🗳️",
       "tag": "IoT · ESP32",
       "tagColor": "#10B981",
-      "main": "IoT-powered Electronic Voting Machine with RFID authentication, real-time vote counting, and Firebase backend for transparent elections.",
+      "main": "IoT-powered Electronic Voting Machine with RFID authentication, real-time vote counting, and Firebase backend.",
+      "fullDescription": "An embedded IoT voting system built using the ESP32 microcontroller, RC522 RFID reader module, OLED display, and Google Firebase Realtime Database. Ensures transparent and tamper-resistant election processes by validating voter identity with encrypted RFID cards, preventing duplicate vote submissions, and streaming live cryptographic vote tallies directly to an administrative web console.",
       "image": "/assets/voteing.jpg",
       "demo": "https://github.com/JaasirAhamed15/smart_evm",
-      "demoLabel": "GitHub"
+      "demoLabel": "GitHub",
+      "github": "https://github.com/JaasirAhamed15/smart_evm",
+      "secondaryLink": "",
+      "secondaryLinkLabel": ""
     },
     {
       "id": "proj-4",
@@ -376,10 +388,14 @@
       "emoji": "🚗",
       "tag": "Computer Vision",
       "tagColor": "#F59E0B",
-      "main": "Real-time vehicle number plate detection using OpenCV and YOLO. Ideal for parking management, toll booths, and security with AI-driven OCR.",
+      "main": "Real-time vehicle number plate detection using OpenCV and YOLO with AI-driven OCR recognition.",
+      "fullDescription": "Computer vision pipeline leveraging YOLO deep learning object detection algorithms and OpenCV image processing. Detects vehicle license plates in real-time camera video streams, isolates plate regions of interest, corrects perspective skews, and performs Optical Character Recognition (OCR) via Tesseract to automate parking toll entries, gate security, and vehicle tracking systems.",
       "image": "/assets/numplate.jpg",
       "demo": "https://github.com/JaasirAhamed15",
-      "demoLabel": "GitHub"
+      "demoLabel": "GitHub",
+      "github": "https://github.com/JaasirAhamed15",
+      "secondaryLink": "",
+      "secondaryLinkLabel": ""
     },
     {
       "id": "proj-5",
@@ -387,10 +403,14 @@
       "emoji": "📝",
       "tag": "Next.js · MongoDB",
       "tagColor": "#8B5CF6",
-      "main": "Dynamic blog platform with full CRUD, rich text editing, image uploads, and a fully responsive design optimized for all screen sizes.",
+      "main": "Dynamic blog platform with full CRUD, rich text editing, image uploads, and fully responsive layout.",
+      "fullDescription": "Modern full-stack blogging platform built with Next.js App Router, Tailwind CSS, and MongoDB Atlas. Features an intuitive markdown/rich-text editor, cloud media asset management, category taxonomy, dynamic SEO metadata generation, server-side caching for instant article delivery, and interactive reader discussion comments.",
       "image": "/assets/blog.jpg",
       "demo": "https://github.com/JaasirAhamed15/my_blog",
-      "demoLabel": "GitHub"
+      "demoLabel": "GitHub",
+      "github": "https://github.com/JaasirAhamed15/my_blog",
+      "secondaryLink": "",
+      "secondaryLinkLabel": ""
     },
     {
       "id": "proj-6",
@@ -398,10 +418,14 @@
       "emoji": "🖼️",
       "tag": "AI · ClipDrop API",
       "tagColor": "#EC4899",
-      "main": "AI-powered app that converts text prompts into images via the ClipDrop API — with prompt history, style options, and download support.",
+      "main": "AI-powered web app converting text prompts into images via ClipDrop API with style options and downloads.",
+      "fullDescription": "Interactive generative AI application utilizing ClipDrop / Stability AI diffusion APIs. Users can write descriptive prompts, select visual styles (photorealistic, anime, cinematic, 3D render), generate high-resolution art assets in seconds, view prompt revision history, and download generated creations directly to local storage.",
       "image": "/assets/texttoimage.webp",
       "demo": "https://github.com/JaasirAhamed15/imagify",
-      "demoLabel": "GitHub"
+      "demoLabel": "GitHub",
+      "github": "https://github.com/JaasirAhamed15/imagify",
+      "secondaryLink": "",
+      "secondaryLinkLabel": ""
     },
     {
       "id": "proj-7",
@@ -409,10 +433,14 @@
       "emoji": "🤖",
       "tag": "Robotics · Arduino",
       "tagColor": "#F97316",
-      "main": "Autonomous robot for public waste collection using ESP32-CAM, Arduino, ultrasonic sensors, and a mechanical arm for detecting and sorting trash.",
+      "main": "Autonomous robot for public waste collection using ESP32-CAM, Arduino, ultrasonic sensors, and mechanical arm.",
+      "fullDescription": "An autonomous robotics project designed to clean public walkways and campus environments. Equipped with an ESP32-CAM module for vision transmission, HC-SR04 ultrasonic distance sensors for dynamic obstacle avoidance, an Arduino microcontroller controlling motor drivers, and a servo-powered multi-axis mechanical arm capable of grasping litter and depositing it into an onboard bin.",
       "image": "/assets/rover.jpg",
       "demo": null,
-      "demoLabel": null
+      "demoLabel": null,
+      "github": "https://github.com/JaasirAhamed15",
+      "secondaryLink": "",
+      "secondaryLinkLabel": ""
     },
     {
       "id": "proj-8",
@@ -420,10 +448,66 @@
       "emoji": "📍",
       "tag": "Next.js · Flutter · Node.js",
       "tagColor": "#EF4444",
-      "main": "Smart tourist safety platform with real-time live tracking, geofencing alerts, and SOS emergency system. Tourists are monitored via mobile or wearable devices, and agencies/guides receive instant alerts to respond and rescue in danger situations.",
+      "main": "Smart tourist safety platform with real-time live tracking, geofencing alerts, and SOS emergency response system.",
+      "fullDescription": "A comprehensive tourist protection ecosystem developed across Next.js, Flutter, and Node.js WebSocket infrastructure. Mobile companions provide tourists with real-time GPS telemetry, safe zone boundaries, and single-tap SOS distress broadcasts. The central monitoring web dashboard allows tourism police and certified tour operators to view live tourist clusters on interactive maps, trigger perimeter alerts, and coordinate rapid emergency dispatch.",
       "image": "/assets/Tourist safety and tracking in action.png",
       "demo": "https://github.com/JaasirAhamed15/travelon",
-      "demoLabel": "GitHub"
+      "demoLabel": "GitHub",
+      "github": "https://github.com/JaasirAhamed15/travelon",
+      "secondaryLink": "",
+      "secondaryLinkLabel": ""
     }
-  ]
+  ],
+  "sectionsConfig": [
+    {
+      "id": "about",
+      "name": "About Me",
+      "navLabel": "About",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "id": "skills",
+      "name": "Skills & Education",
+      "navLabel": "Skills",
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "id": "services",
+      "name": "Services",
+      "navLabel": "Services",
+      "enabled": true,
+      "order": 3
+    },
+    {
+      "id": "experience",
+      "name": "Work Experience",
+      "navLabel": "Experience",
+      "enabled": true,
+      "order": 4
+    },
+    {
+      "id": "certificates",
+      "name": "Certificates",
+      "navLabel": "Certificates",
+      "enabled": true,
+      "order": 5
+    },
+    {
+      "id": "projects",
+      "name": "Projects",
+      "navLabel": "Projects",
+      "enabled": true,
+      "order": 6
+    },
+    {
+      "id": "leetcode",
+      "name": "LeetCode & Coding Profiles",
+      "navLabel": "Coding",
+      "enabled": true,
+      "order": 7
+    }
+  ],
+  "customSections": []
 }

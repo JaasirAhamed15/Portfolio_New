@@ -20,7 +20,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jaasirahamed.dev"),
+  metadataBase: new URL("https://jaasirahamed15.vercel.app"),
   title: "Jaasir Ahamed | Full Stack Developer & Software Engineer",
   description:
     "Jaasir Ahamed is a Full Stack Developer (MERN, Next.js), Mobile App Developer (Flutter), and IoT Engineer passionate about building high-performance web applications and software systems.",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://jaasirahamed.dev",
+    url: "https://jaasirahamed15.vercel.app",
     title: "Jaasir Ahamed | Full Stack Developer Portfolio",
     description:
       "Explore the portfolio of Jaasir Ahamed, featuring full-stack web applications, mobile apps, robotics, IoT projects, and competitive programming achievements.",
@@ -86,8 +86,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Jaasir Ahamed",
-    url: "https://jaasirahamed.dev",
-    image: "https://jaasirahamed.dev/assets/my_image.png",
+    url: "https://jaasirahamed15.vercel.app",
+    image: "https://jaasirahamed15.vercel.app/assets/my_image.png",
     sameAs: [
       "https://github.com/JaasirAhamed15",
       "https://www.linkedin.com/in/jaasirahamed15",
@@ -115,14 +115,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col antialiased">
+      <body suppressHydrationWarning className="min-h-screen flex flex-col antialiased">
         <ThemeProvider>
           {children}
         </ThemeProvider>

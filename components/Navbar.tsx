@@ -4,51 +4,48 @@ import React, { useState } from "react";
 import { RiCloseLine, RiMenu2Line } from "@remixicon/react";
 import ThemeToggle from "./ThemeToggle";
 
-const Navbar = () => {
+export interface NavItem {
+  id: string; // anchor id e.g. "About" or "freelance"
+  label: string;
+}
+
+interface NavbarProps {
+  navItems?: NavItem[];
+}
+
+const DEFAULT_NAV_ITEMS: NavItem[] = [
+  { id: "About", label: "About" },
+  { id: "Skills", label: "Skills" },
+  { id: "Services", label: "Services" },
+  { id: "Certificates", label: "Certificates" },
+  { id: "Projects", label: "Projects" },
+  { id: "Contact", label: "Contact" },
+];
+
+const Navbar = ({ navItems = DEFAULT_NAV_ITEMS }: NavbarProps) => {
   const [menu, openmenu] = useState(false);
   const [showMenu, setShowMenu] = useState(true);
+
+  const items = navItems && navItems.length > 0 ? navItems : DEFAULT_NAV_ITEMS;
 
   return (
     <nav className="flex flex-wrap justify-between items-center text-white px-6 sm:px-10 pt-6 md:px-20 relative z-50 transition-colors">
       <div className="flex items-center gap-4">
-        <span className="text-3xl sm:text-4xl font-bold tracking-wide text-blue-500">
+        <a href="#Home" aria-label="Go to homepage" className="text-3xl sm:text-4xl font-bold tracking-wide text-blue-500 hover:opacity-90 transition-opacity">
           Portfolio
-        </span>
+        </a>
       </div>
 
       {/* Desktop Navigation Links & Theme Toggle */}
       <div className="hidden md:flex items-center gap-8">
         <ul className="flex items-center gap-6 font-semibold">
-          <a href="#About">
-            <li className="text-lg text-white dark:text-white transition-all duration-300 hover:text-blue-500 hover:scale-105">
-              About
-            </li>
-          </a>
-          <a href="#Skills">
-            <li className="text-lg text-white dark:text-white transition-all duration-300 hover:text-blue-500 hover:scale-105">
-              Skills
-            </li>
-          </a>
-          <a href="#Services">
-            <li className="text-lg text-white dark:text-white transition-all duration-300 hover:text-blue-500 hover:scale-105">
-              Services
-            </li>
-          </a>
-          <a href="#Certificates">
-            <li className="text-lg text-white dark:text-white transition-all duration-300 hover:text-blue-500 hover:scale-105">
-              Certificates
-            </li>
-          </a>
-          <a href="#Projects">
-            <li className="text-lg text-white dark:text-white transition-all duration-300 hover:text-blue-500 hover:scale-105">
-              Projects
-            </li>
-          </a>
-          <a href="#Contact">
-            <li className="text-lg text-white dark:text-white transition-all duration-300 hover:text-blue-500 hover:scale-105">
-              Contact
-            </li>
-          </a>
+          {items.map((item) => (
+            <a key={item.id} href={`#${item.id}`}>
+              <li className="text-lg text-white dark:text-white transition-all duration-300 hover:text-blue-500 hover:scale-105">
+                {item.label}
+              </li>
+            </a>
+          ))}
         </ul>
 
         {/* Theme Toggle Button */}
@@ -59,25 +56,22 @@ const Navbar = () => {
       <div className="flex md:hidden items-center gap-3">
         <ThemeToggle />
 
-        {showMenu ? (
-          <RiMenu2Line
-            size={30}
-            className="transition-all duration-300 cursor-pointer"
-            onClick={() => {
-              openmenu(!menu);
-              setShowMenu(!showMenu);
-            }}
-          />
-        ) : (
-          <RiCloseLine
-            size={30}
-            className="transition-all duration-300 p-1 cursor-pointer"
-            onClick={() => {
-              openmenu(!menu);
-              setShowMenu(!showMenu);
-            }}
-          />
-        )}
+        <button
+          type="button"
+          aria-label={showMenu ? "Open navigation menu" : "Close navigation menu"}
+          aria-expanded={menu}
+          className="p-1 rounded-lg text-white hover:text-blue-400 focus:outline-none cursor-pointer"
+          onClick={() => {
+            openmenu(!menu);
+            setShowMenu(!showMenu);
+          }}
+        >
+          {showMenu ? (
+            <RiMenu2Line size={28} className="transition-all duration-300" />
+          ) : (
+            <RiCloseLine size={28} className="transition-all duration-300" />
+          )}
+        </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
@@ -87,36 +81,20 @@ const Navbar = () => {
         } absolute top-full mt-2 py-4 font-semibold bg-gray-900/95 dark:bg-gray-900/95 backdrop-blur-md rounded-2xl shadow-xl
         text-center md:hidden gap-6`}
       >
-        <a href="#About" onClick={() => { openmenu(false); setShowMenu(true); }}>
-          <li className="text-xl text-white p-3 hover:text-blue-500 transition-colors">
-            About
-          </li>
-        </a>
-        <a href="#Skills" onClick={() => { openmenu(false); setShowMenu(true); }}>
-          <li className="text-xl text-white p-3 hover:text-blue-500 transition-colors">
-            Skills
-          </li>
-        </a>
-        <a href="#Services" onClick={() => { openmenu(false); setShowMenu(true); }}>
-          <li className="text-xl text-white p-3 hover:text-blue-500 transition-colors">
-            Services
-          </li>
-        </a>
-        <a href="#Certificates" onClick={() => { openmenu(false); setShowMenu(true); }}>
-          <li className="text-xl text-white p-3 hover:text-blue-500 transition-colors">
-            Certificates
-          </li>
-        </a>
-        <a href="#Projects" onClick={() => { openmenu(false); setShowMenu(true); }}>
-          <li className="text-xl text-white p-3 hover:text-blue-500 transition-colors">
-            Projects
-          </li>
-        </a>
-        <a href="#Contact" onClick={() => { openmenu(false); setShowMenu(true); }}>
-          <li className="text-xl text-white p-3 hover:text-blue-500 transition-colors">
-            Contact
-          </li>
-        </a>
+        {items.map((item) => (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            onClick={() => {
+              openmenu(false);
+              setShowMenu(true);
+            }}
+          >
+            <li className="text-xl text-white p-3 hover:text-blue-500 transition-colors">
+              {item.label}
+            </li>
+          </a>
+        ))}
       </ul>
     </nav>
   );

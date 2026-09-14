@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, Variants } from "framer-motion";
-import { IoOpenOutline, IoLogoGithub } from "react-icons/io5";
+import { IoOpenOutline, IoLogoGithub, IoArrowForwardOutline } from "react-icons/io5";
 import { ProjectItem } from "@/lib/portfolio-storage";
 
 const useTilt = () => {
@@ -30,9 +32,29 @@ const cardVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
-const ProjectCard = ({ project }: { project: ProjectItem; index: number }) => {
+interface ProjectCardProps {
+  project: ProjectItem;
+  index: number;
+}
+
+const ProjectCard = ({ project, index }: ProjectCardProps) => {
+  const router = useRouter();
   const { tiltStyle, onMove, onLeave } = useTilt();
   const [hovered, setHovered] = useState(false);
+
+  const slug =
+    project.id ||
+    project.title
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "") ||
+    `project-${index + 1}`;
+
+  const projectUrl = `/projects/${slug}`;
+
+  const handleClick = () => {
+    router.push(projectUrl);
+  };
 
   return (
     <motion.div
@@ -43,9 +65,10 @@ const ProjectCard = ({ project }: { project: ProjectItem; index: number }) => {
         setHovered(false);
       }}
       onMouseEnter={() => setHovered(true)}
+      onClick={handleClick}
       className="group relative flex flex-col h-full rounded-2xl overflow-hidden
         border border-gray-700/50 bg-gray-900/70 backdrop-blur-sm
-        shadow-xl cursor-default"
+        shadow-xl cursor-pointer transition-colors duration-200 hover:border-indigo-500/50"
       style={{
         ...tiltStyle,
         boxShadow: hovered ? `0 0 32px ${project.tagColor}25` : undefined,
@@ -88,18 +111,23 @@ const ProjectCard = ({ project }: { project: ProjectItem; index: number }) => {
       {/* ── content ── */}
       <div className="flex flex-col flex-grow p-5 gap-3">
         {/* accent line + title */}
-        <div className="flex items-center gap-2">
-          <span
-            className="flex-shrink-0 w-1 h-5 rounded-full"
-            style={{ background: project.tagColor }}
-          />
-          <h3 className="text-white font-bold text-base sm:text-lg leading-tight">
-            {project.title}
-          </h3>
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 min-w-0">
+            <span
+              className="flex-shrink-0 w-1 h-5 rounded-full"
+              style={{ background: project.tagColor }}
+            />
+            <h3 className="text-white font-bold text-base sm:text-lg leading-tight truncate group-hover:text-indigo-300 transition-colors">
+              {project.title}
+            </h3>
+          </div>
+          <span className="text-xs text-slate-400 group-hover:text-white transition-colors opacity-0 group-hover:opacity-100 flex items-center gap-0.5">
+            Details ↗
+          </span>
         </div>
 
-        {/* description */}
-        <p className="text-gray-400 text-sm leading-relaxed flex-grow">
+        {/* short description */}
+        <p className="text-gray-400 text-sm leading-relaxed flex-grow line-clamp-3">
           {project.main}
         </p>
 
@@ -115,7 +143,7 @@ const ProjectCard = ({ project }: { project: ProjectItem; index: number }) => {
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
               className="flex items-center gap-1.5 text-xs font-semibold
-                px-3 py-2 rounded-xl border transition-all duration-200
+                px-3 py-1.5 rounded-xl border transition-all duration-200
                 hover:scale-105 active:scale-95 cursor-pointer"
               style={{
                 color: project.tagColor,
@@ -131,18 +159,17 @@ const ProjectCard = ({ project }: { project: ProjectItem; index: number }) => {
               {project.demoLabel || "Link"}
             </a>
           ) : (
-            <span className="text-[11px] text-gray-500 italic">No demo yet</span>
+            <span className="text-[11px] text-gray-500 italic">Explore details</span>
           )}
 
-          {/* hover glow bottom line */}
-          <div
-            className="h-0.5 w-8 rounded-full transition-all duration-300"
-            style={{
-              background: `linear-gradient(to right, ${project.tagColor}, transparent)`,
-              opacity: hovered ? 1 : 0,
-              width: hovered ? "3rem" : "0",
-            }}
-          />
+          <Link
+            href={projectUrl}
+            onClick={(e) => e.stopPropagation()}
+            className="inline-flex items-center gap-1 text-xs font-semibold text-slate-300 hover:text-white transition-colors py-1.5 px-3 rounded-lg hover:bg-slate-800/80 border border-slate-700/50"
+          >
+            <span>View Details</span>
+            <IoArrowForwardOutline size={13} />
+          </Link>
         </div>
       </div>
 

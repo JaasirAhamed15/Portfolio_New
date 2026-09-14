@@ -133,6 +133,7 @@ const Lightbox = ({
           </div>
           <button
             onClick={onClose}
+            aria-label="Close lightbox"
             className="text-gray-400 hover:text-white text-sm font-semibold
               px-4 py-2 rounded-lg border border-gray-700 hover:border-gray-500 transition-colors duration-200 cursor-pointer"
           >
@@ -143,6 +144,7 @@ const Lightbox = ({
         {/* prev / next inside lightbox */}
         <button
           onClick={onPrev}
+          aria-label="Previous certificate"
           className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full
             bg-black/60 hover:bg-black/80 text-white transition-colors duration-200 cursor-pointer"
         >
@@ -150,6 +152,7 @@ const Lightbox = ({
         </button>
         <button
           onClick={onNext}
+          aria-label="Next certificate"
           className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full
             bg-black/60 hover:bg-black/80 text-white transition-colors duration-200 cursor-pointer"
         >

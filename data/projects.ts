@@ -4,9 +4,13 @@ export interface Project {
   tag: string;
   tagColor: string;
   main: string;
+  fullDescription?: string;
   image: string;
   demo: string | null;
   demoLabel: string | null;
+  github?: string | null;
+  secondaryLink?: string | null;
+  secondaryLinkLabel?: string | null;
 }
 
 export const projects: Project[] = [

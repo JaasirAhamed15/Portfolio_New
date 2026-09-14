@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://jaasirahamed.dev/sitemap.xml",
+    sitemap: "https://jaasirahamed15.vercel.app/sitemap.xml",
   };
 }
 

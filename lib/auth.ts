@@ -10,7 +10,7 @@ export async function signAdminToken(username: string): Promise<string> {
   return await new SignJWT({ username, role: "admin" })
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
-    .setExpirationTime("7d")
+    .setExpirationTime("1d")
     .sign(key);
 }
 

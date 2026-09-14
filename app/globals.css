@@ -3,6 +3,17 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    height: 0px;
+    background: transparent;
   }
 }
 
@@ -10,9 +21,24 @@
   scroll-behavior: smooth;
 }
 
+/* Hide scrollbar for all elements */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
 /* Base Styles */
 body {
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
@@ -291,19 +317,243 @@ html.dark body,
   opacity: 0.3 !important;
 }
 
-/* Light Admin Panel styling */
-.light aside {
-  background-color: #ffffff !important;
-  border-color: #e2e8f0 !important;
+/* Professional Human-Designed Admin Dashboard Styling */
+.admin-shell {
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: -0.011em;
 }
-.light aside h2,
-.light aside span {
+
+.dark .admin-shell {
+  background-color: #0b0f17 !important;
+  color: #f1f5f9 !important;
+}
+
+.light .admin-shell {
+  background-color: #f8fafc !important;
   color: #0f172a !important;
 }
-.light aside button {
+
+/* Sidebar styling */
+.dark .admin-sidebar {
+  background-color: #0e1422 !important;
+  border-color: #1e293b !important;
+}
+
+.light .admin-sidebar {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LIGHT THEME: ADMIN PANEL FIXES
+   - Buttons have pure white text (no black text on blue/indigo)
+   - Clean slate surfaces without dark/muddy gray backgrounds
+   - No dark borders under header or sidebar brand
+   - Text has high contrast and readability
+───────────────────────────────────────────────────────────── */
+
+.light .admin-shell {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+.light .admin-shell h1,
+.light .admin-shell h2,
+.light .admin-shell h3,
+.light .admin-shell h4,
+.light .admin-shell h5 {
+  color: #0f172a !important;
+}
+
+/* All indigo and primary buttons must have crisp white text in light mode */
+.light .admin-shell button.bg-indigo-600,
+.light .admin-shell button.bg-indigo-600 *,
+.light .admin-shell .bg-indigo-600,
+.light .admin-shell .bg-indigo-600 *,
+.light .admin-shell button.bg-blue-600,
+.light .admin-shell button.bg-blue-600 * {
+  color: #ffffff !important;
+}
+
+/* Active navigation button */
+.light .admin-sidebar button.bg-indigo-600,
+.light .admin-sidebar button.bg-indigo-600 * {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+}
+
+/* Inactive navigation buttons in light sidebar */
+.light .admin-sidebar button:not(.bg-indigo-600) {
   color: #475569 !important;
 }
-.light aside button:hover {
+.light .admin-sidebar button:not(.bg-indigo-600):hover {
   background-color: #f1f5f9 !important;
   color: #0f172a !important;
 }
+.light .admin-sidebar a {
+  color: #475569 !important;
+}
+.light .admin-sidebar a:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* Brand header in light sidebar */
+.light .admin-sidebar h2 {
+  color: #0f172a !important;
+}
+
+/* Cards and Panels in Light Mode */
+.light .admin-shell .bg-\[\#0e1422\] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light .admin-shell .bg-\[\#111827\] {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light .admin-shell .bg-\[\#0a0e17\] {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light .admin-shell .bg-\[\#0b0f19\] {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Headings and title text in cards */
+.light .admin-shell .text-white {
+  color: #0f172a !important;
+}
+
+/* Labels and helper text */
+.light .admin-shell label,
+.light .admin-shell .text-slate-400 {
+  color: #64748b !important;
+}
+.light .admin-shell .text-slate-300 {
+  color: #334155 !important;
+}
+.light .admin-shell .text-slate-500 {
+  color: #64748b !important;
+}
+.light .admin-shell .text-gray-400 {
+  color: #64748b !important;
+}
+
+/* Form inputs & textareas in light mode */
+.light .admin-shell input:not([type="checkbox"]):not([type="color"]),
+.light .admin-shell textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+.light .admin-shell input:not([type="checkbox"]):not([type="color"]):focus,
+.light .admin-shell textarea:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 1px #6366f1 !important;
+}
+
+/* Disabled input and textarea states in light mode */
+.light .admin-shell input:disabled,
+.light .admin-shell textarea:disabled {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  border-color: #e2e8f0 !important;
+  cursor: not-allowed !important;
+  user-select: none !important;
+}
+
+/* Disabled input and textarea states in dark mode */
+.dark .admin-shell input:disabled,
+.dark .admin-shell textarea:disabled {
+  background-color: #080c14 !important;
+  color: #94a3b8 !important;
+  border-color: #1e293b !important;
+  cursor: not-allowed !important;
+  user-select: none !important;
+}
+
+/* Secondary buttons (Edit, Cancel, Reset, Up/Down, etc.) */
+.light .admin-shell button.bg-slate-800,
+.light .admin-shell button.bg-slate-800\/80,
+.light .admin-shell button.bg-slate-800\/60,
+.light .admin-shell button.bg-gray-800,
+.light .admin-shell label.bg-slate-800 {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+}
+.light .admin-shell button.bg-slate-800:hover,
+.light .admin-shell button.bg-slate-800\/80:hover,
+.light .admin-shell button.bg-slate-800\/60:hover,
+.light .admin-shell button.bg-gray-800:hover,
+.light .admin-shell label.bg-slate-800:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+
+/* Move Up / Move Down buttons */
+.light .admin-shell button[title="Move Up"],
+.light .admin-shell button[title="Move Down"] {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  border-color: #cbd5e1 !important;
+}
+.light .admin-shell button[title="Move Up"]:hover,
+.light .admin-shell button[title="Move Down"]:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Number badge in Section ordering */
+.light .admin-shell .bg-slate-800\/80.text-slate-300 {
+  background-color: #e2e8f0 !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Borders in light mode */
+.light .admin-shell .border-slate-800,
+.light .admin-shell .border-slate-800\/90,
+.light .admin-shell .border-slate-800\/80,
+.light .admin-shell .border-slate-800\/70,
+.light .admin-shell .border-slate-800\/60,
+.light .admin-shell .border-slate-700,
+.light .admin-shell .border-slate-700\/80,
+.light .admin-shell .border-slate-700\/70,
+.light .admin-shell .border-slate-700\/60,
+.light .admin-shell .border-slate-700\/50,
+.light .admin-shell .border-gray-800 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Light mode modal container */
+.light .admin-shell .fixed .bg-\[\#0e1422\],
+.light .admin-shell .fixed .bg-\[\#10172a\],
+.light .admin-shell .fixed .bg-gray-900 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+}
+.light .admin-shell .fixed .bg-\[\#0a0e17\] {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Reset Defaults button specifically */
+.light .admin-shell button.border-slate-700\/60 {
+  border-color: #cbd5e1 !important;
+  color: #334155 !important;
+}
+.light .admin-shell button.border-slate-700\/60:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
