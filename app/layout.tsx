@@ -38,8 +38,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Jaasir Ahamed", url: "https://github.com/JaasirAhamed15" }],
   creator: "Jaasir Ahamed",
   icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    icon: [
+      { url: "/jaasir-favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/jaasir-favicon.svg",
+    shortcut: "/jaasir-favicon.svg",
   },
   openGraph: {
     type: "website",
